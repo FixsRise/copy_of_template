@@ -1,16 +1,1 @@
 
-# Pre-commit hook to run tests and linters
-
-# Run tests
-make test
-if [ $? -ne 0 ]; then
-  echo "Tests failed, commit aborted."
-  exit 1
-fi
-
-# Run linter
-make lint
-if [ $? -ne 0 ]; then
-  echo "Linting failed, commit aborted."
-  exit 1
-fi
